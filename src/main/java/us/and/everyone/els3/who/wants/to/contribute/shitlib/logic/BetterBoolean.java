@@ -5,7 +5,8 @@ package us.and.everyone.els3.who.wants.to.contribute.shitlib.logic;
  * It also has a maybe value, which is better than a boolean because it's not a boolean. You can use it if you're not sure
  */
 
-// TODO: Add NOT_YET and NOT_ANYMORE, which both return true for isNo() and isNotYes() and false for isYes() and isNotNo()
+// TODO: Remove below comment as I already added it -- mfnalex
+// TODO: Add NOT_YET and NOT_ANYMORE, which both return true for isNo() and isNotYes() and false for isYes() and isNotNo() -- mfnalex
 public enum BetterBoolean {
     /**
      * This is a yes value. It's basically {@link Boolean#TRUE}
@@ -82,6 +83,8 @@ public enum BetterBoolean {
             case YES:
                 return true;
             case NO:
+            case NOT_ANYMORE:
+            case NOT_YET:
                 return false;
             case MAYBE:
                 throw new UnsupportedOperationException("Cannot convert MAYBE to boring booleans!");
