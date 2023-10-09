@@ -78,6 +78,18 @@ public enum BetterBoolean {
         return bool ? YES : NO;
     }
 
+    public static BetterBoolean fromBoringBoolean(boolean bool, BetterBoolean canBecomeYESLaterOnIfCurrentlyNO) {
+        if(bool) return YES;
+        if(canBecomeYESLaterOnIfCurrentlyNO.isYes()) {
+            return NOT_YET;
+        } else if (canBecomeYESLaterOnIfCurrentlyNO.isNo()){
+            return NO;
+        } else {
+            throw new IllegalArgumentException("canBecomeYESLaterOnIfCurrentlyNO must be YES or NO");
+        }
+
+    }
+
     public boolean toBoringBoolean() {
         switch(this) {
             case YES:
