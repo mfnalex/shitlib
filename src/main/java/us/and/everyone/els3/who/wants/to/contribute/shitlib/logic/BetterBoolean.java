@@ -47,9 +47,11 @@ public enum BetterBoolean {
         return this == YES;
     }
 
-
+    /**
+     * Checks if this exactly no, but not NOT_YET or NOT_ANYMORE
+     */
     public boolean isNo() {
-        return this != NO;
+        return this == NO;
     }
 
     public boolean isNotYet() {
