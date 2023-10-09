@@ -7,3 +7,4 @@ We will accept any pull requests if they meet the following requirements:
 - Refrain from using plain old booleans. We got BetterBooleans for a reason. Use that instead!
 - Do not remove existing features or you'll get rekd by mfnalex
 - You can use Paper specific methods but you'll have to create a separate module for that
+- DO NOT COMMIT your .idea folder. Although it's funny, it leads to problems whenever someone else wants to "contribute"
