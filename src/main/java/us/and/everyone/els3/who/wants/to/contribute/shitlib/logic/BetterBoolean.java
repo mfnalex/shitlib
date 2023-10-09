@@ -55,11 +55,11 @@ public enum BetterBoolean {
     }
 
     public boolean isNotYet() {
-        return this != NOT_YET;
+        return this == NOT_YET;
     }
 
     public boolean isNotAnymore() {
-        return this != NOT_ANYMORE;
+        return this == NOT_ANYMORE;
     }
 
     /**
