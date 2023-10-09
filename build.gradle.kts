@@ -38,3 +38,15 @@ useSpigotRepo()
 // ...
 
 ohAndAlsoUseSpigotAsDependency("1.8.8") // best version
+
+val mctestdir = File("C:\\mctest\\plugins")
+if(mctestdir.isDirectory) {
+    tasks {
+        "jar"(Jar::class) {
+            archiveFileName.set("shitlib.jar")
+            destinationDirectory.set(mctestdir)
+        }
+    }
+} else {
+    println("C:\\mctest\\plugins is not a directory, not copying jar")
+}
