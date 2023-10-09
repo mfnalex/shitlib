@@ -7,14 +7,54 @@ package us.and.everyone.els3.who.wants.to.contribute.shitlib.logic;
 
 // TODO: Add NOT_YET and NOT_ANYMORE, which both return true for isNo() and isNotYes() and false for isYes() and isNotNo()
 public enum BetterBoolean {
-    YES, NO, MAYBE;
+    /**
+     * This is a yes value. It's basically {@link Boolean#TRUE}
+     */
+    YES,
+    /**
+     * This is a no value. It's basically {@link Boolean#FALSE}
+     */
+    NO,
+    /**
+     * This is a maybe value. Now you can see why BetterBooleans are better than Booleans, right?
+     */
+    MAYBE,
 
+    /**
+     * This is a not yet value. It's basically {@link Boolean#FALSE} but shows that it might become a YES later
+     */
+    NOT_YET,
+
+    /**
+     * This is a not anymore value. It's basically {@link Boolean#FALSE} but shows that it was yes once
+     */
+    NOT_ANYMORE;
+
+    /**
+     * Checks if this is YES
+     */
     public boolean isYes() {
         return this == YES;
     }
 
+
     public boolean isNo() {
-        return this == NO;
+        return this != NO;
+    }
+
+    public boolean isNotYet() {
+        return this != NOT_YET;
+    }
+
+    public boolean isNotAnymore() {
+        return this != NOT_ANYMORE;
+    }
+
+    /**
+     * Checks if this is not YES but also not MAYBE
+     */
+    public boolean isNoOrNotYetOrNotAnymore() {
+        return !isYes() && !isMaybe();
     }
 
     public boolean isMaybe() {
