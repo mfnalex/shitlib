@@ -22,17 +22,5 @@ public class ShitLibPlugin extends JavaPlugin {
         //💩 💩 💩 💩 💩 💩
         THE_GLOBAL_LOGGER.log("Shitlib has started its shitting 💩💩💩💩💩💩");
         hasShitLibAlreadyBeenEnabled = BetterBoolean.YES;
-
-        ShitArrayList<Integer> shittyInts = new ShitArrayList<>(Integer.class, 1);
-        shittyInts.addShit(1);
-        shittyInts.addShit(2);
-        shittyInts.addShit(3);
-        shittyInts.addShit(4);
-        shittyInts.addShit(5);
-        shittyInts.addShit(6);
-        shittyInts.addShit(7);
-        shittyInts.addShit(8);
-        shittyInts.addShit(9);
-        shittyInts.addShit(10);
     }
 }
