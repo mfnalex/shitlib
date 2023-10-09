@@ -1,5 +1,7 @@
 package us.and.everyone.els3.who.wants.to.contribute.shitlib.logic;
 
+import us.and.everyone.els3.who.wants.to.contribute.shitlib.logging.ShittyLogger;
+
 /**
  * This is a better boolean. It's better because it's an enum, and enums are better than booleans as they are not primitives.
  * It also has a maybe value, which is better than a boolean because it's not a boolean. You can use it if you're not sure
@@ -30,6 +32,13 @@ public enum BetterBoolean {
      * This is a not anymore value. It's basically {@link Boolean#FALSE} but shows that it was yes once
      */
     NOT_ANYMORE;
+
+    private static final ShittyLogger LOGGER = ShittyLogger.getLoggerForThisClazz();
+
+    static {
+        // TODO: Fix typo in log message -- mfnalex
+        LOGGER.log("BetterBooleans are better than Booleans because they are not primitives, hence this class was now loaded and itialized.");
+    }
 
     /**
      * Checks if this is YES
