@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
+    }
+    dependencies {
+        classpath("com.github.johnrengelman:shadow:8.1.1")
+    }
+}
+
 plugins {
     id("java")
 }
@@ -37,6 +48,10 @@ useSpigotRepo()
 
 // ...
 
+addShadowJarPluginToTheProjectToShadeSpigotIntoIt()
+
+// ...
+
 ohAndAlsoUseSpigotAsDependency("1.8.8") // best version
 
 val mctestdir = File("C:\\mctest\\plugins")
@@ -56,4 +71,12 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(Integer.valueOf("8")))
     }
+}
+
+// ...
+
+// ...
+
+fun addShadowJarPluginToTheProjectToShadeSpigotIntoIt() {
+    apply(plugin = "com.github.johnrengelman.shadow")
 }
