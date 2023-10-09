@@ -18,7 +18,8 @@ public class ShitLibPlugin extends JavaPlugin {
         }
 
         hasShitLibAlreadyBeenEnabled = BetterBoolean.MAYBE;
-        THE_GLOBAL_LOGGER.log("ShitLib is enabled!");
+        //💩 💩 💩 💩 💩 💩
+        THE_GLOBAL_LOGGER.log("Shitlib has started its shitting 💩💩💩💩💩💩");
         hasShitLibAlreadyBeenEnabled = BetterBoolean.YES;
     }
 }
