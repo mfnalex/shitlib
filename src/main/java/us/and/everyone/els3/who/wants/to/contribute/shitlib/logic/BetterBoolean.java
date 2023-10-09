@@ -4,6 +4,8 @@ package us.and.everyone.els3.who.wants.to.contribute.shitlib.logic;
  * This is a better boolean. It's better because it's an enum, and enums are better than booleans as they are not primitives.
  * It also has a maybe value, which is better than a boolean because it's not a boolean. You can use it if you're not sure
  */
+
+// TODO: Add NOT_YET and NOT_ANYMORE, which both return true for isNo() and isNotYes() and false for isYes() and isNotNo()
 public enum BetterBoolean {
     YES, NO, MAYBE;
 
