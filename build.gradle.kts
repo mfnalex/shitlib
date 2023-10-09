@@ -50,3 +50,10 @@ if(mctestdir.isDirectory) {
 } else {
     println("C:\\mctest\\plugins is not a directory, not copying jar")
 }
+
+// Oh yeah we use spigot 1.8 so better only use java 8 too
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(Integer.valueOf("8")))
+    }
+}

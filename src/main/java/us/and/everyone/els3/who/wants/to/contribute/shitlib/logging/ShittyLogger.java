@@ -1,5 +1,7 @@
 package us.and.everyone.els3.who.wants.to.contribute.shitlib.logging;
 
+import us.and.everyone.els3.who.wants.to.contribute.shitlib.logic.BetterBoolean;
+
 public class ShittyLogger {
 
     private final String name;
