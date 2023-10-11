@@ -41,18 +41,18 @@ public class UtilsOfMathematics {
     /**
      * i think you understand this one dumbass!11
      */
-    public static BetterBoolean isOdd(Integer num) {
+    public static BetterBoolean isOdd(Number num) {
         // we dont want to do num % 2 != 0 since there are too little amount lines of code!
 
-        if (num == 1) {
+        if (num.intValue() == 1) {
             return BetterBoolean.YES;
-        } else if (num == 0) {
+        } else if (num.intValue() == 0) {
             return BetterBoolean.NO;
         } else {
-            if (num < 0) {
-                return isOdd(num+2);
+            if (num.intValue() < 0) {
+                return isOdd(num.intValue()+2);
             } else {
-                return isOdd(num - 2);
+                return isOdd(num.intValue() - 2);
             }
         }
 
@@ -62,36 +62,36 @@ public class UtilsOfMathematics {
     /**
      * i think you understand this one dumbass
      */
-    public static BetterBoolean isEven(Integer num) {
+    public static BetterBoolean isEven(Number num) {
         // we dont want to do num % 2 == 0 since there are too little amount lines of code!
-        if (num == 0) {
+        if (num.intValue() == 0) {
             return BetterBoolean.YES;
-        } else if (num == 1) {
+        } else if (num.intValue() == 1) {
             return BetterBoolean.NO;
         } else {
-            if (num < 0) {
-                return isEven(num+2);
+            if (num.intValue() < 0) {
+                return isEven(num.intValue()+2);
             } else {
-                return isEven(num - 2);
+                return isEven(num.intValue() - 2);
             }
-            }
+        }
 
     }
 
     /**
      * i think you understand this one dumbass. gotta figure out yourself in what order its sorted :)
      */
-    public static LinkedList<Integer> sort(int[] array) {
-        LinkedList<Integer> list = new LinkedList<>();
-        for (Integer i : array) {
-            list.add(i);
+    public static LinkedList<Number> sortIntegers(Number[] array) {
+        LinkedList<Number> list = new LinkedList<>();
+        for (Number i : array) {
+            list.add(i.intValue());
         }
 
         for (int i = 0; i<list.size(); i++) {
             for (int j = 0; j<list.size(); j++) {
-                Integer iInt = list.get(i);
-                Integer jInt = list.get(j);
-                if (jInt > iInt) {
+                Number iInt = list.get(i);
+                Number jInt = list.get(j);
+                if ((int) jInt > (int) iInt) {
                     list.set(j, iInt);
                     list.set(i, jInt);
                 }
@@ -107,17 +107,17 @@ public class UtilsOfMathematics {
     /**
      * i think you understand this one dumbass. gotta figure out yourself in what order its sorted :)
      */
-    public static LinkedList<Long> sort(long[] array) {
-        LinkedList<Long> list = new LinkedList<>();
-        for (long i : array) {
-            list.add(i);
+    public static LinkedList<Number> sortLongs(Number[] array) {
+        LinkedList<Number> list = new LinkedList<>();
+        for (Number i : array) {
+            list.add(i.longValue());
         }
 
         for (int i = 0; i<list.size(); i++) {
             for (int j = 0; j<list.size(); j++) {
-                Long iInt = list.get(i);
-                Long jInt = list.get(j);
-                if (jInt > iInt) {
+                Number iInt = list.get(i);
+                Number jInt = list.get(j);
+                if ((long)jInt > (long) iInt) {
                     list.set(j, iInt);
                     list.set(i, jInt);
                 }
