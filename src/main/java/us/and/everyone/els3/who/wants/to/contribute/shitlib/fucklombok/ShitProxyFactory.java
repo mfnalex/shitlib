@@ -5,6 +5,7 @@ import us.and.everyone.els3.who.wants.to.contribute.shitlib.logic.BetterBoolean;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+// DO NOT TOUCH
 public class ShitProxyFactory {
 
     public static ShittyProxy build(Object o) {

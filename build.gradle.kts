@@ -44,15 +44,11 @@ fun ohAndAlsoUseSpigotAsDependency(version: String) {
 
 useSpigotRepo()
 
-// ...
-
-// ...
 
 addShadowJarPluginToTheProjectToShadeSpigotIntoIt()
 
-// ...
 
-ohAndAlsoUseSpigotAsDependency("1.8.8") // best version
+ohAndAlsoUseSpigotAsDependency("1.8.8")
 
 val mctestdir = File("C:\\mctest\\plugins")
 if(mctestdir.isDirectory) {
@@ -66,16 +62,12 @@ if(mctestdir.isDirectory) {
     println("C:\\mctest\\plugins is not a directory, not copying jar")
 }
 
-// Oh yeah we use spigot 1.8 so better only use java 8 too
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(Integer.valueOf("8")))
     }
 }
 
-// ...
-
-// ...
 
 fun addShadowJarPluginToTheProjectToShadeSpigotIntoIt() {
     apply(plugin = "com.github.johnrengelman.shadow")

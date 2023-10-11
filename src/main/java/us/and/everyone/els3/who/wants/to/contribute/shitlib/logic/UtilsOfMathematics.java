@@ -6,11 +6,7 @@ import java.util.LinkedList;
 
 public class UtilsOfMathematics {
 
-    /**
-     * i think you understand this one dumbass!11
-     */
     public static BetterBoolean isOdd(Integer num) {
-        // we dont want to do num % 2 != 0 since there are too little amount lines of code!
 
         if (num == 1) {
             return BetterBoolean.YES;
@@ -27,11 +23,7 @@ public class UtilsOfMathematics {
     }
 
 
-    /**
-     * i think you understand this one dumbass
-     */
     public static BetterBoolean isEven(Integer num) {
-        // we dont want to do num % 2 == 0 since there are too little amount lines of code!
         if (num == 0) {
             return BetterBoolean.YES;
         } else if (num == 1) {
@@ -46,9 +38,6 @@ public class UtilsOfMathematics {
 
     }
 
-    /**
-     * i think you understand this one dumbass. gotta figure out yourself in what order its sorted :)
-     */
     public static LinkedList<Integer> sort(int[] array) {
         LinkedList<Integer> list = new LinkedList<>();
         for (Integer i : array) {
@@ -72,9 +61,6 @@ public class UtilsOfMathematics {
 
 
 
-    /**
-     * i think you understand this one dumbass. gotta figure out yourself in what order its sorted :)
-     */
     public static LinkedList<Long> sort(long[] array) {
         LinkedList<Long> list = new LinkedList<>();
         for (long i : array) {
