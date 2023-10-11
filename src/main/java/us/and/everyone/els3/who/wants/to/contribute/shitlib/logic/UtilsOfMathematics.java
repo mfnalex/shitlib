@@ -1,10 +1,10 @@
 package us.and.everyone.els3.who.wants.to.contribute.shitlib.logic;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Collections;
 import java.util.OptionalInt;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.IntBinaryOperator;
 
 public class UtilsOfMathematics {
@@ -74,32 +74,10 @@ public class UtilsOfMathematics {
             } else {
                 return isEven(num.intValue() - 2);
             }
-        }
-
-    }
-
-    /**
-     * i think you understand this one dumbass. gotta figure out yourself in what order its sorted :)
-     */
-    public static LinkedList<Number> sortIntegers(Number[] array) {
-        LinkedList<Number> list = new LinkedList<>();
-        for (Number i : array) {
-            list.add(i.intValue());
-        }
-
-        for (int i = 0; i<list.size(); i++) {
-            for (int j = 0; j<list.size(); j++) {
-                Number iInt = list.get(i);
-                Number jInt = list.get(j);
-                if ((int) jInt > (int) iInt) {
-                    list.set(j, iInt);
-                    list.set(i, jInt);
-                }
-
             }
-        }
-        return list;
+
     }
+
 
 
 
@@ -107,7 +85,7 @@ public class UtilsOfMathematics {
     /**
      * i think you understand this one dumbass. gotta figure out yourself in what order its sorted :)
      */
-    public static LinkedList<Number> sortLongs(Number[] array) {
+    public static LinkedList<Number> sort(Number[] array) {
         LinkedList<Number> list = new LinkedList<>();
         for (Number i : array) {
             list.add(i.longValue());
@@ -125,6 +103,37 @@ public class UtilsOfMathematics {
             }
         }
         return list;
+    }
+    private static BetterBoolean isPrime2(Number num) {
+        if (num.intValue() == 1) {
+            return BetterBoolean.NO;
+        }
+
+        Number counter = 0;
+        for (Number i = 1; i.longValue() <= num.longValue(); i = i.longValue()+1) {
+            if (num.longValue() % i.longValue() == 0) {
+                counter = counter.intValue()+1;
+            }
+        }
+
+        if (counter.longValue() == 2) {
+            return BetterBoolean.YES;
+        } else {
+            return BetterBoolean.NO;
+        }
+
+
+    }
+
+
+
+    private static CompletableFuture<BetterBoolean> isPrimeAsync(Number num) {
+        return CompletableFuture.supplyAsync(() -> isPrime2(num));
+    }
+    public static BetterBoolean isPrime(Number num) {
+        CompletableFuture<BetterBoolean> primeCheckFuture = isPrimeAsync(num);
+        return primeCheckFuture.join();
+    
     }
 
 
