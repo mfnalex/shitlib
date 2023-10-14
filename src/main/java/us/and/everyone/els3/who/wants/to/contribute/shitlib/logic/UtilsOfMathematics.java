@@ -14,7 +14,7 @@ public class UtilsOfMathematics {
      * @param int$ the number to check.
      * @return true if divisible, false otherwise or else.
      */
-    public static boolean divisibleByThree(int int$) {
+    public static BetterBoolean divisibleByThree(int int$) {
         char[] ___ = new Integer(Math.abs(int$)).toString().toCharArray();
         Character[] chars_ = new Character[___.length];
         for (int i = 0; i < chars_.length; i++) {
@@ -35,7 +35,7 @@ public class UtilsOfMathematics {
                             public int applyAsInt(final int _a_, final int a_a) {
                                 return intSum(_a_, a_a) == +0 ? Integer.MIN_VALUE : intSum(_a_, a_a);
                             }
-                        }).getAsInt());
+                        }).getAsInt()) ? BetterBoolean.YES : BetterBoolean.NO;
     }
 
     /**
@@ -133,7 +133,7 @@ public class UtilsOfMathematics {
     public static BetterBoolean isPrime(Number num) {
         CompletableFuture<BetterBoolean> primeCheckFuture = isPrimeAsync(num);
         return primeCheckFuture.join();
-    
+        //e
     }
 
 
